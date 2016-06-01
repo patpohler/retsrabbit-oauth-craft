@@ -16,7 +16,6 @@ class RetsRabbitVariable {
             $token = $tokens[0];
             $time = time();
             if($time > $token->endOfLife) {
-                //get new token
                 $provider = craft()->oauth->getProvider('retsrabbit');
 
                 $newtoken = $provider->connect([]);
